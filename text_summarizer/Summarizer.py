@@ -10,8 +10,6 @@ import re
 import numpy as np
 import pandas as pd
 
-
-
 def cosine_similarity(X, Y_set):
     X_list = nltk.word_tokenize(X)  
 

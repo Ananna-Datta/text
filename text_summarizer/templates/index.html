@@ -79,13 +79,10 @@
                 <form class="form_card" action="{% url 'index' %}" method="POST">
                     <div class="bg"></div>
                     {% csrf_token %}
-                    <input type="text" class="form-control bg-white" placeholder="Enter the website URL" name="url_link" id="url_link">
+                    
                     {% if url_error == True %}
-                    <div class="form-control alert-danger" style="margin-top: 10px; background-color: #f8d7da !important;">
-                        <center><p style="color: red;"><b>Please enter a valid URL.</b></p></center>
-                    </div>
+                    
                     {% endif %}
-                    <center><h3 style="margin: 10px 0 10px 0; color:#138496">Or</h3></center>
                     <textarea class="form-control bg-white" placeholder="Enter the text" name="textarea" rows="10" ></textarea>
                     <br>
                     <input type="text" name="num_lines" class="form-control bg-white" placeholder="Enter how many percent do you want to summeraize"><br>

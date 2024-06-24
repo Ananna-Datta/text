@@ -10,9 +10,6 @@ import time
 def index(request):
     context = {'flag':False, 'url_error':False, 'summarize_div':True}
     if request.method == 'POST':
-        if len(request.POST['textarea']) > 0 and len(request.POST['url_link']) > 0:
-            messages.error(request, "Enter either URL or Text, not Both.")
-            return redirect('index')
         
         if len(request.POST['textarea']) >0:
             if request.POST['num_lines']:
